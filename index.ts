@@ -1,1 +1,1 @@
-console.log('Setup done');
+import './01-the-basics/01-array';
