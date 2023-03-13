@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "/workspaces/algorithms-and-data-structures",
+            "name": "algorithms-and-data-structures"
+        }
+    ],
+    "settings": {
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        }
+    }
+}
