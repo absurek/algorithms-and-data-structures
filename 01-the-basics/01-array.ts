@@ -1,4 +1,4 @@
-console.log('01-the-basics', 'Array example');
+console.log('01-the-basics', '01-array');
 
 // initialize the array
 const array: number[] = [1, 2, 3];

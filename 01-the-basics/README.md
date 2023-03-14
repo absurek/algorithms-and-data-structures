@@ -1,4 +1,6 @@
-# Based on: [Data Structures - Computer Science Course for Beginners - YouTube](https://youtu.be/zg9ih6SVACc)
+# Data Structures - The Basics
+
+Based on: [Data Structures - Computer Science Course for Beginners - YouTube](https://youtu.be/zg9ih6SVACc)
 
 ## What are Data Structures?
 
@@ -64,11 +66,12 @@
 - You can have higher dimensional arrays as well.
 
 ### An example:
-[arrays in typescript](01-array.ts)
+
+[Arrays in TypeScript](01-array.ts)
 
 ### Arrays analysed as a Data Structure Using BigO Notation
 
- - Accessing an element: **O(1)**
+ - Accessing an element: **O(1)**:
    - This is because:
      - An arrays elements are stored right next to each other in memory.
      - An arrays elements have the a specific type.
@@ -76,17 +79,17 @@
        in memory and then adding the given index times the size of the type of the elements to it: <br />
        `arrayStart + (index * (sizeof (typeof element)))`
 
- - Searching for an element: **O(n)**
+ - Searching for an element: **O(n)**:
    - This is because we must use *linear search* as most of the time we are working with unsorted lists.
 
- - Inserting an element: **O(n)**
+ - Inserting an element: **O(n)**:
    - This is because inserting an element whithin the array requires to shift every element that's after
      the index you want to insert into.
     - For example given the array `[2, 3, 4, 5, null]` to insert 1 at index 0:
       - We have to shift every element currently in the array like this `[null, 2, 3, 4, 5]`.
       - Then insert 1 to the empty slot: `[1, 2, 3, 4, 5]`.
 
- - Deleting an element: **O(n)**
+ - Deleting an element: **O(n)**:
    - This is because to remove an element from an array at a given index, we have to
      essentialy play the steps for an insertions backwards.
 
@@ -100,7 +103,41 @@
 
 ### Time Complexity Equations of the ArrayList
 
-- Accessing: **O(1)**
-- Searching: **O(n)**
-- Inserting: **O(n)**
-- Deleting: **O(n)**
+- Accessing: **O(1)**.
+- Searching: **O(n)**.
+- Inserting: **O(n)**.
+- Deleting: **O(n)**.
+
+## The Stack
+
+- The Array and the ArrayList are both **random access data structures**:
+  - They provide **O(1)** accessing.
+  - Elements can be accessed in any order.
+  - Independent elements.
+
+- The Stack however isn't: it's a **sequential access data structure**:
+  - Elements can ony be accessed in a particular order.
+  - Each element is dependent on the others.
+  - May only be obtained through those other elements.
+
+- Within the stack we add and remove elements according to the
+  <abbr title="Last In First Out">LIFO</abbr> principle:
+  - Whichever element we added to the element last, will be the first one we retrieve,
+    hence: **L**ast **I**n **F**irst **O**ut.
+
+### Time Complexity of the Stack operations
+
+- Accessing: **O(n)**:
+  - Because in the worst-case scenario, we need the element on the bottom of the Stack.
+- Searching: **O(n)**:
+  - For the same reason as access.
+- Inserting: **O(1)**:
+  - Inserting on the top of our stack (`push`).
+- Deleting: **O(1)**:
+  - Deleting from the top of our stack (`pop`).
+
+### Real World Examples When a Stack is Useful
+
+- Undo/Redo text input
+- Back Paging
+- Also at the core of function calls in programming
