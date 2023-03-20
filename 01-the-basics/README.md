@@ -125,19 +125,51 @@ Based on: [Data Structures - Computer Science Course for Beginners - YouTube](ht
   - Whichever element we added to the element last, will be the first one we retrieve,
     hence: **L**ast **I**n **F**irst **O**ut.
 
-### Time Complexity of the Stack operations
+### Time Complexity of Stack operations
 
 - Accessing: **O(n)**:
   - Because in the worst-case scenario, we need the element on the bottom of the Stack.
 - Searching: **O(n)**:
   - For the same reason as access.
 - Inserting: **O(1)**:
-  - Inserting on the top of our stack (`push`).
+  - Inserting on the top of our Stack (`push`).
 - Deleting: **O(1)**:
-  - Deleting from the top of our stack (`pop`).
+  - Deleting from the top of our Stack (`pop`).
 
 ### Real World Examples When a Stack is Useful
 
-- Undo/Redo text input
-- Back Paging
-- Also at the core of function calls in programming
+- Undo/Redo text input.
+- Back Paging.
+- Also at the core of function calls in programming.
+
+### An example:
+
+[Stacks in TypeScript](02-stack.ts)
+
+## The Queue
+
+- A sequential access data structure, which follows the <abbr title="First In First Out">FIFO</abbr> methodology:
+  - **F**irst **I**n **F**irst **O**ut: the first element added to the structure is always the first one to be removed.
+
+### Time Complexity of Queue operations
+
+**Same as the Stack:**
+
+- Accessing: **O(n)**:
+  - Because in the worst-case scenario, we need the element on the end of the Queue.
+- Searching: **O(n)**:
+  - For the same reason as access.
+- Inserting: **O(1)**:
+  - Inserting to the front of our Queue (`enqueue`).
+- Deleting: **O(1)**:
+  - Deleting from the end of our Queue (`dequeue`).
+
+### Common Examples from the Real World
+
+- Job Scheduling.
+- Printers.
+- Modern Cameras.
+
+### An example:
+
+[Queues in TypeScript](03-queue.ts)
